@@ -6,5 +6,6 @@
     $DB_PASS = "";
 
     $DB_SESSION_TABLE = "sessions";
+    $DB_USERS_TABLE = "users";
 
 ?>
