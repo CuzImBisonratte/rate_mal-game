@@ -38,6 +38,7 @@
                 // Add the values to session vars
                 $_SESSION["username"] = $username;
                 $_SESSION["session_id"] = $session_id;
+                $_SESSION["user_id"] = $con->insert_id;
 
                 // Redirect
                 header("Location: ./page1-pause.php");

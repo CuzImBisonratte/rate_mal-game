@@ -69,3 +69,14 @@ form input[type="submit"] {
     right: 0;
     background-color: #2a1245;
 }
+
+.abort_pause_button {
+    width: 100vw;
+    text-align: center;
+    background-color: red;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    padding-top: 0.25rem;
+    cursor: pointer;
+}

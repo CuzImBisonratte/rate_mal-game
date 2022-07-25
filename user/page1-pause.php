@@ -22,6 +22,7 @@
     <p class="heading" id="user_choose_name_heading">Rate Mal! - Pause</p>
     <p class="sub_heading" id="user_choose_name_sub_heading">Bitte warte kurz!</p>
 
+    <div class="abort_pause_button" onclick="leave();">Runde verlassen</div>
 
     <!-- Get the ajax library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
