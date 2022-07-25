@@ -49,3 +49,23 @@ form input[type="submit"] {
     margin: 2.5rem auto auto auto;
     cursor: pointer;
 }
+
+.top_bar {
+    width: calc(100vw - 6rem);
+    text-align: center;
+    height: 2.5rem;
+    font-size: 1.75rem;
+    background-color: #451245;
+    position: fixed;
+    top: 0;
+    right: 6rem;
+}
+
+#top_bar_session {
+    width: 6rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #2a1245;
+}

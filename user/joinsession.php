@@ -1,5 +1,8 @@
 <?php 
 
+    // Start session
+    session_start();
+
     // Get the userinput
     $username = $_POST["username"];
     $session_id = $_POST["session_id"];
@@ -31,6 +34,14 @@
 
                 // close the statement
                 $stmt->close();
+
+                // Add the values to session vars
+                $_SESSION["username"] = $username;
+                $_SESSION["session_id"] = $session_id;
+
+                // Redirect
+                header("Location: ./page1-pause.php");
+                exit("Leite weiter...");
 
             } else {
                 // Log the error
