@@ -13,6 +13,9 @@ function createSession() {
             // Set the id to the frontend
             document.getElementById("session_id_container").innerText = "ID: " + session_id;
 
+            // Make the user list visible
+            document.getElementById("user_list").style.display = "flex"
+
             console.log(session_id);
         }
     });

@@ -43,3 +43,27 @@ body {
     white-space: nowrap;
     font-size: 2rem;
 }
+
+.user_list {
+    display: none;
+    margin: auto;
+    width: min-content;
+    min-width: min(1000px, 95vw);
+    height: min-content;
+    min-height: min(500px, 95vh);
+    background-color: #2f2f55;
+    margin-top: 2rem;
+    border-radius: 2.5rem;
+    justify-content: center;
+}
+
+.user_list_item {
+    padding: 1rem;
+    margin: 0.25rem;
+    background-color: #1f1f45;
+    border-radius: 1rem;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    font-size: 1.25rem;
+}
