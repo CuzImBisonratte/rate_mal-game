@@ -1,3 +1,5 @@
+var userAlreadyOnPage = [];
+
 function createSession() {
     document.getElementById("host_session_create_button").style.display = "none";
 
@@ -15,6 +17,45 @@ function createSession() {
 
             // Make the user list visible
             document.getElementById("user_list").style.display = "flex"
+
+            // Add username loader
+            usernameloadtimer = window.setInterval(() => {
+
+                // Get the usernames from "./getusers.php"
+                $.ajax({
+                    url: "./getusers.php",
+                    type: "POST",
+                    data: {},
+                    success: function(data) {
+
+                        // convert data to a string
+                        data = data.toString();
+
+                        // decode json
+                        json = JSON.parse(data);
+
+                        // loop through
+                        json.forEach(element => {
+
+                            if (userAlreadyOnPage.includes(element)) {
+                                // Do nothing (go to next element)
+                                return;
+                            }
+
+                            // Add the element to the check array
+                            userAlreadyOnPage.push(element);
+
+                            // Add username to userboard
+                            var username_obj = document.createElement("div");
+                            username_obj.classList.add("user_list_item");
+                            username_obj.innerHTML = element;
+                            document.getElementById("user_list").appendChild(username_obj);
+
+                        });
+                    }
+                });
+
+            }, 3 * 1000);
 
             console.log(session_id);
         }
