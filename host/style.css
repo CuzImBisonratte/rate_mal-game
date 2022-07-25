@@ -35,3 +35,11 @@ body {
     background-color: #1f1f45;
     transform: scale(1.025);
 }
+
+#session_id_container {
+    margin: auto;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    font-size: 2rem;
+}
