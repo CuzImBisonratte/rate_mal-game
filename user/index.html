@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Mal!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p class="heading" id="user_choose_name_heading">Rate Mal! - Zugang</p>
+    <p class="sub_heading" id="user_choose_name_sub_heading">Wähle einen Nutzernamen</p>
+
+    <form action="./joinsession.php" method="post">
+        <input type="text" name="username" id="user_choose_name_form_username" placeholder="Nutzername">
+        <input type="text" name="session_id" id="user_choose_name_form_id" placeholder="ID">
+        <input type="submit" id="user_choose_name_form_submit" value="Einloggen">
+    </form>
+
+    <!-- Get the ajax library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
