@@ -1,5 +1,8 @@
 <?php
 
+    // Start sessions
+    session_start();
+
     // Get db keys
     require_once("../config.php");
 
@@ -11,7 +14,7 @@
 
     // Get users
     $users = array();
-    $query = $con->query('SELECT username FROM '.$DB_USERS_TABLE);
+    $query = $con->query('SELECT username FROM '.$DB_USERS_TABLE.' WHERE session_id='.$_SESSION["session_id"]);
     while($row = mysqli_fetch_array($query)){
         array_push($users, $row["username"]);
     }

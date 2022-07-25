@@ -1,5 +1,8 @@
 <?php 
 
+    // Start session
+    session_start();
+
     // Get db keys
     require_once("../config.php");
 
@@ -37,6 +40,9 @@
                 if ($stmt = $con->prepare('INSERT INTO '.$DB_SESSION_TABLE.' (session_id) VALUES (?)')) {
                     $stmt->bind_param('s', $new_id);
                     $stmt->execute();
+
+                    // Add session id to session var
+                    $_SESSION["session_id"] = $new_id;
 
                     // close the statement
                     $stmt->close();
