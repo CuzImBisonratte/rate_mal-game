@@ -1,8 +1,7 @@
 # Rate Mal! - The Game
 
 Rate Mal! is a game i got to know in school.  
-Because we could only play it in small groups, because otherwise the evaluation of the points would take too much time.  
-So i thought: "If i could make it a digital game out of it, there would be no such restriction!"
+Because we could only play it in small groups, because otherwise the evaluation of the points would take too much time, i thought: "If i could make it a digital game out of it, there would be no such restriction!"
 
 ## Gameplay
 There is a situation told and the students need to decide what they themselfes would do (They can only choose between three answers).  
