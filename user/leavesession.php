@@ -1,5 +1,8 @@
 <?php 
 
+    // Start the session
+    session_start();
+
     // Get db keys
     require_once("../config.php");
 
@@ -12,12 +15,9 @@
     // Run a deletion query for the user entry
     if($stmt = $con->prepare("DELETE FROM ".$DB_USERS_TABLE." WHERE user_id=".$_SESSION["user_id"])){
         $stmt->execute();
-        $stmt->close();
-        $con->close();
     }
 
     // Destroy the session
-    session_start();
     session_destroy();
 
     // Redirect to index
