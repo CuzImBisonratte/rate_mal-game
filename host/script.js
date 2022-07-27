@@ -48,9 +48,20 @@ function createSession() {
                             // Add username to userboard
                             var username_obj = document.createElement("div");
                             username_obj.classList.add("user_list_item");
+                            username_obj.id = "user_list_item_" + toString(element);
                             username_obj.innerHTML = element;
                             document.getElementById("user_list").appendChild(username_obj);
 
+                        });
+
+                        userAlreadyOnPage.forEach(element => {
+
+                            // Check if user is no more in recieved json
+                            if (!userAlreadyOnPage.includes(element)) {
+
+                                // Delete the element
+                                document.getElementById("user_list_item_" + toString(element)).remove();
+                            }
                         });
                     }
                 });
