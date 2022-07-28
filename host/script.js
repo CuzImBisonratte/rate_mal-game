@@ -57,7 +57,7 @@ function createSession() {
                         userAlreadyOnPage.forEach(element => {
 
                             // Check if user is no more in recieved json
-                            if (!userAlreadyOnPage.includes(element)) {
+                            if (!json.includes(element)) {
 
                                 // Delete the element
                                 document.getElementById("user_list_item_" + toString(element)).remove();
